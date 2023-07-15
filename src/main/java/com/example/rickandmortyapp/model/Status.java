@@ -8,6 +8,6 @@ public enum Status {
     private String value;
 
     Status(String value) {
-            this.value = value;
-        }
+        this.value = value;
+    }
 }

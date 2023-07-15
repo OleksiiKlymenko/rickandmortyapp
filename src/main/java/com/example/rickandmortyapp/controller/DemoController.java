@@ -1,6 +1,5 @@
 package com.example.rickandmortyapp.controller;
 
-import com.example.rickandmortyapp.dto.ApiResponseDto;
 import com.example.rickandmortyapp.service.HttpClient;
 import com.example.rickandmortyapp.service.MovieCharacterService;
 import lombok.extern.log4j.Log4j2;

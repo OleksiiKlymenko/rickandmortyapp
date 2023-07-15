@@ -1,6 +1,7 @@
 package com.example.rickandmortyapp.dto.mapper;
 
-import com.example.rickandmortyapp.dto.ApiCharacterDto;
+import com.example.rickandmortyapp.dto.CharacterResponseDto;
+import com.example.rickandmortyapp.dto.external.ApiCharacterDto;
 import com.example.rickandmortyapp.model.Gender;
 import com.example.rickandmortyapp.model.MovieCharacter;
 import com.example.rickandmortyapp.model.Status;
@@ -16,5 +17,15 @@ public class MovieCharacterMapper {
         movieCharacter.setName(dto.getName());
 
         return movieCharacter;
+    }
+
+    public CharacterResponseDto mapToDto(MovieCharacter movieCharacter) {
+        CharacterResponseDto characterResponseDto = new CharacterResponseDto();
+        characterResponseDto.setId(movieCharacter.getId());
+        characterResponseDto.setExternalId(movieCharacter.getExternalId());
+        characterResponseDto.setName(movieCharacter.getName());
+        characterResponseDto.setGender(movieCharacter.getGender());
+        characterResponseDto.setStatus(movieCharacter.getStatus());
+        return characterResponseDto;
     }
 }

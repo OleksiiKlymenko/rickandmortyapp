@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 public class HttpClient {
     private final CloseableHttpClient httpClient = HttpClients.createDefault();
     private ObjectMapper objectMapper = new ObjectMapper();
+
     {
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     }
